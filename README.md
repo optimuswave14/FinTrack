@@ -12,28 +12,26 @@ A full-stack personal finance tracker with React frontend, Node.js backend, and 
 
 ## Features
 
-- ✅ Add / Edit / Delete expenses with categories
-- ✅ Set monthly budgets per category with progress tracking
-- ✅ Dashboard with daily spending chart & category pie
-- ✅ Monthly reports: daily line chart, category breakdown, top 5 expenses
-- ✅ Yearly reports: 12-month bar chart, category totals
-- ✅ Filter expenses by month, year, category
-- ✅ Budget alerts (over-budget warnings)
-- ✅ INR currency formatting
+- Add / Edit / Delete expenses with categories
+- Set monthly budgets per category with progress tracking
+- Dashboard with daily spending chart & category pie
+- Monthly reports: daily line chart, category breakdown, top 5 expenses
+- Yearly reports: 12-month bar chart, category totals
+- Filter expenses by month, year, category
 
 ## Project Structure
 
 ```
 finance-tracker/
 ├── backend/
-│   ├── server.js          # Express entry point
+│   ├── server.js          
 │   ├── routes/
-│   │   ├── expenses.js    # CRUD for expenses
-│   │   ├── budgets.js     # Budget management
-│   │   └── reports.js     # Monthly & yearly reports
+│   │   ├── expenses.js    
+│   │   ├── budgets.js    
+│   │   └── reports.js    
 │   ├── utils/
 │   │   └── storage.js     # JSON file read/write helpers
-│   ├── data/              # Auto-created, stores JSON files
+│   ├── data/              # Auto created, stores JSON files
 │   │   ├── expenses.json
 │   │   └── budgets.json
 │   └── package.json
@@ -41,8 +39,8 @@ finance-tracker/
 └── frontend/
     ├── public/index.html
     ├── src/
-    │   ├── App.js          # Layout + routing
-    │   ├── App.css         # Dark industrial theme
+    │   ├── App.js          
+    │   ├── App.css         
     │   ├── index.js
     │   ├── pages/
     │   │   ├── Dashboard.js
@@ -62,9 +60,6 @@ finance-tracker/
 ```bash
 cd backend
 npm install
-npm run dev      # dev with nodemon
-# OR
-npm start        # production
 ```
 
 Backend runs on **http://localhost:5000**
