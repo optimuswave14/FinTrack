@@ -30,5 +30,24 @@ pipeline {
             }
         }
 
+        stage('SonarCloud Analysis') {
+            steps {
+                script {
+                    def scannerHome = tool 'SonarScanner'
+
+                    withSonarQubeEnv('SonarCloud') {
+
+                        bat """
+                        "${scannerHome}\\bin\\sonar-scanner.bat" ^
+                        -Dsonar.organization=optimuswave14 ^
+                        -Dsonar.projectKey=optimuswave14_FinTrack ^
+                        -Dsonar.sources=. ^
+                        -Dsonar.host.url=https://sonarcloud.io
+                        """
+                    }
+                }
+            }
+        }
+
     }
 }
